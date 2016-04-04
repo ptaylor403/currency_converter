@@ -14,15 +14,17 @@ class Currency:
     def __add__(self, other):
         if self.currency_code == other.currency_code:
             return(self.amount + other.amount)
-        if self.currency_code != other.currency_code:
+        else:
             raise DifferentCurrencyCodeError
 
     def __sub__(self, other):
         if self.currency_code == other.currency_code:
             return(self.amount - other.amount)
-        if self.currency_code != other.currency_code:
+        else:
             raise DifferentCurrencyCodeError
 
+    def __mul__(self, other):
+            return float("%.2f" % Currancy(self.amount * (1 / other.amount), self.currency_code).amount)
 
 class DifferentCurrencyCodeError(Exception):
     pass
