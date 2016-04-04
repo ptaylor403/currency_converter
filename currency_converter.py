@@ -1,5 +1,6 @@
 # currency converter
-from Currency import *
+
+from currency import *
 
 class CurrencyConverter(Currency):
     def __init__(self, currency_codes):
