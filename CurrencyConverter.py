@@ -1,4 +1,4 @@
 # currency converter
 
-class CurrencyConverter():
-    pass
+class CurrencyConverter(Currency):
+    
