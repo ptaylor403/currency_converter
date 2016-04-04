@@ -16,3 +16,9 @@ class Currency:
             return(self.amount + other.amount)
         else:
             return False
+
+    def __sub__(self, other):
+        if self.currency_code == other.currency_code:
+            return(self.amount - other.amount)
+        else:
+            return False
