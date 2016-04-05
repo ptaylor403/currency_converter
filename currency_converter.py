@@ -15,7 +15,7 @@ class CurrencyConverter(Currency):
     def convert(self, amount, currency_code):
         self.amount = amount
         self.currency_code = currency_code
-        
+
 
 
 class UnknownCurrencyCodeError(Exception):
