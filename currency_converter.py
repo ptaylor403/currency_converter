@@ -3,12 +3,19 @@
 from currency import *
 
 class CurrencyConverter(Currency):
-    def __init__(self, currency_rates = {'USD': 1, 'EUR': 0.87}):
-        self.currency_rates = currency_rates
+    exchange_rates = {
+        'USD': 1,
+        'EUR': 0.87,
+        'JPY': 111.3
+    }
 
-    def convert(self, rate, currency_code):
+    def __init__(self, rate):
         self.rate = rate
+
+    def convert(self, amount, currency_code):
+        self.amount = amount
         self.currency_code = currency_code
+        
 
 
 class UnknownCurrencyCodeError(Exception):

@@ -34,15 +34,15 @@ class Currency:
 
     def symbol(self):
         if self.amount[0] == '$':
-            self.amount = self.amount[1:]
+            self.amount = float(self.amount[1:])
             self.currency_code = 'USD'
             return Currency(self.amount, self.currency_code)
         if self.amount[0] == '¥':
-            self.amount = self.amount[1:]
+            self.amount = float(self.amount[1:])
             self.currency_code = 'JPY'
             return Currency(self.amount, self.currency_code)
         if self.amount[0] == '€':
-            self.amount = self.amount[1:]
+            self.amount = float(self.amount[1:])
             self.currency_code = 'EUR'
             return Currency(self.amount, self.currency_code)
 
